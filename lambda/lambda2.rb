@@ -32,3 +32,30 @@ lam.call
 puts proc.class # returns 'Proc'  both proc and lam are Proc objects
 puts lam.class  # returns 'Proc'
     
+#my_lambda = -> { return 1 }
+#puts "Lambda result: #{my_lambda.call}"
+# Should raise exception
+#my_proc = Proc.new { return 1 }
+#puts "Proc result: #{my_proc.call}"
+ 
+# proc will return once and exit or through error or exception whereas lambda will continue its flow after passing through any return statement 
+    
+   def proc_test
+       puts "hello"
+    #->  { return 1  }
+   #Proc.new{  return 1}
+  
+    end
+
+    
+    
+def test
+  puts "entering method"
+  p = proc_test
+  p.call
+  puts "exit method"
+end
+test
+    
+    
+    
